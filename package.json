@@ -1,0 +1,67 @@
+{
+  "name": "compass-starter-app",
+  "version": "4.1.0",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20.19.3 <=24.3.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "prebuild": "npm run lint",
+    "lint": "eslint ."
+  },
+  "overrides": {
+    "eslint-config-next": {
+      "eslint": "$eslint"
+    }
+  },
+  "dependencies": {
+    "@contentstack/delivery-sdk": "^4.7.0",
+    "@contentstack/live-preview-utils": "^3.2.1",
+    "@contentstack/personalize-edge-sdk": "^1.0.12",
+    "@contentstack/utils": "^1.4.0",
+    "@headlessui/react": "2.1.2",
+    "@headlessui/tailwindcss": "^0.2.1",
+    "@heroicons/react": "^2.1.1",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@types/node": "22.2.0",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.15.0",
+    "eslint-config-next": "^15.2.3",
+    "flag-icons": "^7.2.3",
+    "globals": "^15.9.0",
+    "html-react-parser": "^5.1.12",
+    "lodash": "^4.17.21",
+    "next": "^15.2.3",
+    "nprogress": "^0.2.0",
+    "postcss": "^8.4.41",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-error-boundary": "^4.0.13",
+    "react-slick": "^0.29.0",
+    "serve-favicon": "^2.5.0",
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.1.1",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.9.0",
+    "@types/lodash": "^4.17.7",
+    "@types/node": "^22",
+    "@types/nprogress": "^0.2.3",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-html-parser": "^2.0.6",
+    "@types/react-slick": "^0.23.13",
+    "@typescript-eslint/eslint-plugin": "^8.1.0"
+  }
+}

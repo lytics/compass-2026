@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: 'Roboto Condensed';
+}
+.main-layout {
+  min-height: 90vh;
+}
+
+@media (min-width:640px) {
+
+  .card-styled:nth-child(2n-2) {
+    position: relative;
+    top: 94px;
+  }
+}
+
+#pagination-scroll-anchor:target {
+  scroll-margin-top: 85px;
+}
+
+@layer base {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-black dark:text-white font-bold text-black uppercase font-bold;
+  }
+
+  h1 {
+    @apply font-bold text-7xl tracking-normal;
+  }
+
+  h2 {
+    @apply font-bold text-6xl tracking-normal;
+  }
+
+  h3 {
+    @apply font-bold text-[50px] leading-[56px] tracking-normal;
+  }
+
+  h4 {
+    @apply font-bold text-4xl tracking-normal;
+  }
+
+  h5 {
+    @apply font-bold text-[41.93px] leading-[47.52px] tracking-normal;
+  }
+
+  h6 {
+    @apply font-bold text-3xl tracking-normal;
+  }
+
+  p {
+    @apply font-normal text-md tracking-normal;
+  }
+
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-transparent text-stone dark:text-white text-md-extra-wide font-medium cursor-pointer px-[1.875rem] uppercase flex items-center justify-center border border-stone dark:border-white rounded-[2.5rem] w-auto min-w-[11.75rem] h-[2.813rem] hover:bg-[#ffffff4D] hover:underline;
+  }
+
+  .text h1 {
+    @apply xl:mt-0 mt-4 text-7xl font-bold tracking-normal sm:mt-0 sm:text-6xl dark:text-white text-stone
+  }
+
+  .text h2 {
+    @apply text-4xl font-bold dark:text-white pt-[2.23rem] tracking-normal text-stone md:text-6xl
+  }
+
+  .text h2 strong {
+    @apply font-bold p-0
+  }
+
+  .text h3 {
+    @apply font-bold text-2xl text-stone dark:text-white py-4 tracking-normal
+  }
+
+  .text h5 {
+    @apply font-bold text-stone text-lg dark:text-white tracking-normal
+  }
+
+  .text h6 {
+    @apply text-lg text-stone font-normal dark:text-white py-2 tracking-normal
+  }
+
+  .text ul {
+    @apply list-disc pt-7.5 px-6 dark:text-white tracking-normal pb-25
+  }
+
+  .text ol {
+    @apply list-decimal pt-7.5 px-6 dark:text-white tracking-normal pb-25
+  }
+
+  .text li {
+    @apply text-base md:text-md text-stone dark:text-white font-normal tracking-normal
+  }
+
+  .text li strong {
+    @apply font-bold
+  }
+
+  .text p {
+    @apply text-base md:text-md font-normal text-stone tracking-normal dark:text-white pt-7.5;
+
+    &:empty {
+      display: none;
+    }
+
+    &:not(:last-child):not(:has(+ ul)):not(:has(+ ol)):not(:has(+ p)) {
+      @apply pb-25;
+    }
+  }
+
+  .text p strong {
+    @apply text-md md:text-xl font-medium
+  }
+
+  .text > *:last-child {
+    @apply pb-0;
+  }
+
+  p {
+    @apply py-1 font-normal leading-6 text-black dark:text-white tracking-normal
+  }
+
+  .text a {
+    @apply text-[16px] text-purple hover:underline font-semibold tracking-normal
+  }
+
+  .text img {
+    @apply w-full my-8 mx-auto
+  }
+
+  .card-title {
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-subtitle {
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-content {
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .text-clamp {
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .taxonomies-label {
+    @apply font-inter p-[0.875rem] flex items-center gap-[0.625rem] rounded-[0.25rem] border border-[#CDD8E8] bg-[#F0F3F7] hover:border-[#7C4DFF] hover:bg-[#7C4DFF33] hover:underline hover:text-purple text-[#8992AE] text-[1.125rem] leading-[1.375rem] font-medium tracking-[0.045rem] uppercase;
+  }
+
+  .footer {
+    @apply font-inter;
+  }
+  .copyright-info p {
+    @apply font-inter text-sm;
+  }
+  .footer-declaimer p {
+    @apply max-w-fit font-inter text-xs leading-6;
+  }
+
+  .footer-declaimer p > a {
+    @apply hover:underline text-purple outline-none;
+  }
+
+  .user-form-consent p {
+  @apply font-inter text-xs leading-[125%] tracking-normal font-light;
+
+  @apply md:text-sm md:leading-[150%] ;
+}
+
+.user-form-consent p > a {
+  @apply underline text-white outline-none;
+}
+}
+
+:root {
+  --added-item-color: rgba(0, 255, 0);
+  --removed-item-color: rgba(255, 0, 0);
+}
+
+picture .cs-compare__void--added,
+img.cs-compare__void--added,
+video.cs-compare__void--added {
+  border: 3px solid var(--added-item-color);
+}
+
+picture .cs-compare__void--removed,
+img.cs-compare__void--removed,
+video.cs-compare__void--removed {
+  border: 3px solid var(--removed-item-color);
+}
+
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+  content: " ";
+  background-color: #253543;
+  color: #253543;
+  width: 0.543rem;
+  height: 6rem;
+  text-align: inherit;
+
+  transform: rotate(90deg) translateX(-5.5rem) translateY(-47%);
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+.text-right
+.text-right::before,
+h1[style*="text-align: right"]::before,
+h2[style*="text-align: right"]::before,
+h3[style*="text-align: right"]::before,
+h4[style*="text-align: right"]::before,
+h5[style*="text-align: right"]::before,
+h6[style*="text-align: right"]::before {
+  right: 0rem;
+  transform: rotate(90deg) translateX(-7rem) translateY(50%);
+}
+
+.dark h1::before,
+.dark h2::before,
+.dark h3::before,
+.dark h4::before,
+.dark h5::before,
+.dark h6::before {
+  background-color: white;
+}

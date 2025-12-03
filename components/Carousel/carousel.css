@@ -1,0 +1,20 @@
+/* carousel css */
+.slick-prev, .slick-next {
+    @apply !text-gray-700
+}
+
+.slick-disabled {
+    @apply !text-gray-500 !opacity-50 cursor-default
+}
+
+.slick-slider {
+    @apply xl:max-w-[1350px] mx-auto max-w-5xl
+}
+.slick-list {
+    @apply !pl-6 xl:!pl-0
+}
+
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}
