@@ -54,7 +54,7 @@ const config = [
 
         rules: {
             'react-hooks/exhaustive-deps': 'off',
-            indent: ['error', 4],
+            indent: 'off', // Disabled due to stack overflow issues with complex JSX/TS
             'linebreak-style': ['error', 'unix'],
             quotes: ['error', 'single'],
             semi: ['error', 'never'],

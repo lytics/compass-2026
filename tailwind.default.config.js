@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 //https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 // const colors = require('tailwindcss/colors')
 
