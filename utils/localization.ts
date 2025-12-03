@@ -1,7 +1,7 @@
 
 export const isLocale  = (slug: string)  => {
     // Regular expression to match valid locale codes (e.g., 'en', 'en-us', 'zh-cht', 'lt-az-az')
-    const localeRegex = /^[a-z]{2,3}(-[a-z]{2,3}){0,2}$|^[a-z]{2,3}-[a-z]{2}-[a-z]{2}$/
+    const localeRegex = /^[a-z]{2,3}(-[a-z]{2,3}){0,2}$|^[a-z]{2,3}-[a-z]{2}-[a-z]{2}$/i
     return localeRegex.test(slug)
 }
 

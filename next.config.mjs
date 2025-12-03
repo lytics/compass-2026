@@ -26,7 +26,9 @@ const nextConfig = {
         CONTENTSTACK_AB_LANDING_PAGE_PATH: process.env.CONTENTSTACK_AB_LANDING_PAGE_PATH,
         CONTENTSTACK_AB_PRIMARY_EVENT: process.env.CONTENTSTACK_AB_PRIMARY_EVENT || 'Clicked',
 
-        CONTENTSTACK_VISUAL_BUILDER_MODE: process.env.CONTENTSTACK_VISUAL_BUILDER_MODE ? process.env.CONTENTSTACK_VISUAL_BUILDER_MODE : 'builder' // mode: builder | preview
+        CONTENTSTACK_VISUAL_BUILDER_MODE: process.env.CONTENTSTACK_VISUAL_BUILDER_MODE ? process.env.CONTENTSTACK_VISUAL_BUILDER_MODE : 'builder', // mode: builder | preview
+
+        NEXT_PUBLIC_GTM_ID: process.env.NEXT_PUBLIC_GTM_ID
     }
 }
 

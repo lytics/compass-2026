@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Roboto_Condensed } from 'next/font/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -52,6 +53,9 @@ export default async function RootLayout ({
             <body
                 className={`${robotoCondensed.className} ${inter.className}`}
             >
+                {process.env.NEXT_PUBLIC_GTM_ID && (
+                    <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+                )}
                 {children}
             </body>
         </html>
