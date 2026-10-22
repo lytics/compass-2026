@@ -6,7 +6,7 @@ library(purrr)
 renv::load_vars("~/.zprofile")
 
 lio <- lioapi$new()
-lio$account <- list(aid = 6232, apikey = "at.1b874d0579f44253552b0d00b921f1a3.0cca7e1008649c2723f4daa35c264de2")
+lio$account <- list(aid = 6232, apikey = Sys.getenv("LIO_COMPASS_API_KEY"))
 
 segment.scan <- function (api, filterql, ent.limit = Inf, page.size = 100, verbose = TRUE, 
     fn = NULL, accumulate = is.null(fn), fields = c()) 
